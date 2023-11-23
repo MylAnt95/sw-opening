@@ -26,7 +26,7 @@ body {
   height: 700px;
 }
 /*-----------------------------------*/
-/*----------search & button----------*/
+/*Form-------------------------------*/
 textarea,
 input {
   outline: none;
@@ -74,4 +74,15 @@ input:focus {
   padding: 3px 0px;
   align-self: flex-start;
 }
-/*------------------------------------------------*/
+/*------------------------------------*/
+/*SVG Button--------------------------*/
+#stormSVG:hover {
+  opacity: 80%;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#stormSVG:active {
+  transform: scale(1);
+  opacity: 100%;
+}
+/*----------------------------------*/
