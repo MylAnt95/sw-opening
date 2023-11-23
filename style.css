@@ -19,10 +19,59 @@ body {
 }
 
 .wrapper {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
 }
-
+/*-----------------------------------*/
+/*----------search & button----------*/
+textarea,
+input {
+  outline: none;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+input {
+  background-color: unset;
+  border-bottom: 3px solid var(--gold);
+  border-left: unset;
+  border-right: unset;
+  border-top: unset;
+  color: var(--gold);
+  border-radius: 5px;
+}
+input::placeholder {
+  font-size: x-small;
+  opacity: 0.5;
+  color: gold;
+}
+.btn {
+  border: unset;
+  background-color: unset;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--gold);
+}
+textarea:focus,
+input:focus {
+  color: var(--gold);
+}
+.btn-refresh {
+  display: none;
+}
+#error {
+  display: none;
+  color: var(--red);
+  font-size: 10px;
+  padding: 3px 0px;
+  align-self: flex-start;
+}
+/*------------------------------------------------*/
