@@ -8,17 +8,26 @@
   </head>
   <body>
     <div class="wrapper">
-        <div class="input-group">
-          <div class="form-outline">
-            <input type="search" id="input" class="form-control" placeholder="Search"/>
-            <label class="form-label" for="form1"></label>
-            <small id="error"></small>
-          </div>
-          <button type="button" class="btn btn-primary"><image id="stormSVG" src="storm.svg"/></button>
+      <div class="input-group">
+        <div class="form-outline">
+          <input
+            type="search"
+            id="input"
+            class="form-control"
+            placeholder="Search"
+          />
+          <label class="form-label" for="form1"></label>
+          <small id="error"></small>
         </div>
-        <div id="filmList">        
-        </div>
+        <button onclick="searchTitle();" type="button" class="btn btn-primary">
+          <image id="stormSVG" src="storm.svg" />
+        </button>
       </div>
-    <script src="getapi.js"></script>
+      <div id="filmList"></div>
+      <button class="btn btn-refresh" onClick="window.location.reload();">
+        <image id="refreshSVG" src="refresh.svg" />
+      </button>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
