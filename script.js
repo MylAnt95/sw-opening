@@ -53,8 +53,10 @@ function searchTitle() {
 
       // Hide search when showing results
       const searchBar = document.querySelector(".input-group");
-      searchBar.style.display = "none";
-
+      searchBar.style.animation = "hide 1s";
+      setTimeout(function () {
+        searchBar.style.display = "none";
+      }, 900);
 
       // Display refresh button when showing results
       const refreshBtn = document.querySelector(".btn-refresh");
@@ -107,8 +109,8 @@ for (let stars = 0; stars < 300; stars++) {
 const allStars = document.querySelectorAll(".star");
 const colors = ["white", "white", "white", "red", "orange"];
 
-allStars.forEach(star => {
-  let randomColors = Math.floor((Math.random() * colors.length));
+allStars.forEach((star) => {
+  let randomColors = Math.floor(Math.random() * colors.length);
   let randomColor = colors[randomColors];
   star.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
   star.style.bottom = Math.floor(Math.random() * window.innerHeight) + "px";

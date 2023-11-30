@@ -9,6 +9,15 @@
   --red: #ff0000;
 }
 
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
 
 @keyframes scroll {
   0% {
@@ -78,6 +87,8 @@ input {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: absolute;
+  top: 50%;
 }
 input {
   background-color: unset;
