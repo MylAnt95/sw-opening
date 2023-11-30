@@ -25,7 +25,8 @@ getFilms(apiUrlFilms)
     console.log("Error fetching films:", error);
   });
 
-/*-----------------search-function--------------------*/
+/*search-function---------------------------------------------------------*/
+
 function searchTitle() {
   const input = document.getElementById("input").value.toLowerCase().trim();
   const errorElement = document.getElementById("error");
@@ -52,9 +53,12 @@ function searchTitle() {
 
       // Hide search when showing results
       const searchBar = document.querySelector(".input-group");
+      /* const wrapper = document.querySelector(".wrapper");
+      wrapper.style.flexWrap = "nowrap"; */
       searchBar.style.display = "none";
 
-      //Display refresh button when showing results
+
+      // Display refresh button when showing results
       const refreshBtn = document.querySelector(".btn-refresh");
       refreshBtn.style.display = "block";
 
@@ -89,3 +93,25 @@ function searchTitle() {
     }
   }
 }
+
+/*Add stars---------------------------------------------------*/
+
+const body = document.querySelector("body");
+
+// Create star divs and randomly position them inside vp
+for (let stars = 0; stars < 300; stars++) {
+  let starDiv = document.createElement("div");
+  starDiv.className = "star" + " " + stars;
+  body.appendChild(starDiv);
+}
+
+const allStars = document.querySelectorAll(".star");
+const colors = ["white", "white", "white", "red", "orange"];
+
+allStars.forEach(star => {
+  let randomColors = Math.floor((Math.random() * colors.length));
+  let randomColor = colors[randomColors];
+  star.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+  star.style.bottom = Math.floor(Math.random() * window.innerHeight) + "px";
+  star.style.backgroundColor = randomColor;
+});

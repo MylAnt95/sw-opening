@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --gold: #ffd700;
   --red: #ff0000;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@300;400&display=swap");
 
 @keyframes scroll {
   0% {
@@ -14,31 +19,52 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
 body {
-  box-sizing: border-box;
   background-image: linear-gradient(
     to right bottom,
-    #051937,
-    #322c4e,
-    #5a4162,
-    #805875,
-    #a67286
+    #02001d,
+    #03031f,
+    #030522,
+    #030824,
+    #020b27,
+    #0b1730,
+    #16213a,
+    #202b44,
+    #374159,
+    #50596f,
+    #697185,
+    #838b9c
   );
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
   font-family: "Montserrat", sans-serif;
+  height: 900px;
 }
 
 .wrapper {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-content: center;
-  height: 696px;
-  flex-wrap: wrap;
+  height: 100%;
   text-align: center;
-  flex-direction: column;
+  flex-direction: row;
+  width: 60%;
+  flex-wrap: wrap;
+  align-content: center;
 }
+
 /*-----------------------------------*/
 /*Form-------------------------------*/
+
 textarea,
 input {
   outline: none;
@@ -86,8 +112,10 @@ input:focus {
   padding: 3px 0px;
   align-self: flex-start;
 }
+
 /*------------------------------------*/
 /*SVG Button--------------------------*/
+
 #stormSVG:hover {
   opacity: 80%;
   cursor: pointer;
@@ -101,18 +129,17 @@ input:focus {
 #refreshSVG:hover {
   cursor: pointer;
   opacity: 80%;
-  transform: rotate(90deg) scale(1.1);
+  transform: scale(1.1);
+  animation: rotate 500ms;
 }
 #refreshSVG:active {
   transform: scale(1);
   opacity: 100%;
 }
+
 /*----------------------------------*/
 /*film-opener-----------------------*/
-.filmOpener {
-  width: 568px;
-  font-size: 24px;
-}
+
 #filmList {
   display: flex;
   flex-direction: column;
@@ -124,7 +151,7 @@ p {
   position: relative;
   animation: scroll 35s;
   color: var(--gold);
-  transform: rotatex(30deg);
+  transform: rotatex(40deg);
 }
 .filmTitle {
   font-size: 36px;
@@ -132,4 +159,37 @@ p {
 .filmProducer,
 .filmDirector {
   font-size: 20px;
+}
+
+.filmOpener {
+  font-size: 28px;
+}
+
+/*-------------------------------------*/
+/*stars--------------------------------*/
+
+.star {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 100%;
+  }
+  .filmList {
+    height: 80%;
+  }
+  .filmTitle {
+    font-size: 26px;
+  }
+  .filmProducer,
+  .filmDirector {
+    font-size: 16px;
+  }
+  
+  .filmOpener {
+    font-size: 18px;
+  }
 }
