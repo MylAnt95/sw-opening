@@ -28,6 +28,10 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-image: linear-gradient(
     to right bottom,
@@ -47,7 +51,7 @@ body {
   background-repeat: no-repeat;
   /* background-size: 100%; */
   font-family: "Montserrat", sans-serif;
-  height: 900px;
+  height: 100%;
 }
 
 .wrapper {
@@ -178,7 +182,7 @@ p {
   .wrapper {
     width: 100%;
   }
-  .filmList {
+  #filmList {
     height: 80%;
   }
   .filmTitle {

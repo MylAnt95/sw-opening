@@ -53,8 +53,6 @@ function searchTitle() {
 
       // Hide search when showing results
       const searchBar = document.querySelector(".input-group");
-      /* const wrapper = document.querySelector(".wrapper");
-      wrapper.style.flexWrap = "nowrap"; */
       searchBar.style.display = "none";
 
 
