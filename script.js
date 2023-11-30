@@ -77,7 +77,8 @@ function searchTitle() {
 
         const filmProducerElement = document.createElement("p");
         filmProducerElement.classList.add("filmProducer");
-        filmProducerElement.textContent = film.producer;
+        filmProducerElement.textContent = `Produced by \r\n`;
+        filmProducerElement.textContent += film.producer;
         filmListContainer.appendChild(filmProducerElement);
 
         const filmOpeningElement = document.createElement("p");
